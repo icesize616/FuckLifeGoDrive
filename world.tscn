@@ -23,9 +23,13 @@ mode = 0
 textures = [ [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ) ], [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ) ] ]
 
 [node name="Spatial" type="Spatial"]
+transform = Transform( 9.52713, 0, 0, 0, 11.3781, 0, 0, 0, 36.4962, 0, 0, 0 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( -0.239085, -0.969889, -0.0463997, -0.842044, 0.183301, 0.507309, -0.483529, 0.160361, -0.860514, 38.0186, 73.428, -6.42547 )
 
 [node name="HTerrain" type="Spatial" parent="."]
 script = ExtResource( 1 )
