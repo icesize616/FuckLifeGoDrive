@@ -1,0 +1,44 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
+[ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=2]
+[ext_resource path="res://map/grass/Ground037_2K_Color.jpg" type="Texture" id=3]
+[ext_resource path="res://map/grass/Ground037_2K_Normal.jpg" type="Texture" id=4]
+[ext_resource path="res://map/dirtt/Ground030_2K_Color.jpg" type="Texture" id=5]
+[ext_resource path="res://map/road/Asphalt019_2K_Normal.jpg" type="Texture" id=6]
+[ext_resource path="res://map/dirtt/Ground030_2K_Normal.jpg" type="Texture" id=7]
+[ext_resource path="res://map/road/Asphalt019_2K_Color.jpg" type="Texture" id=8]
+[ext_resource path="res://map/data.hterrain" type="Resource" id=9]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+auto_exposure_enabled = true
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+mode = 0
+textures = [ [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ) ], [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ) ] ]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="HTerrain" type="Spatial" parent="."]
+script = ExtResource( 1 )
+_terrain_data = ExtResource( 9 )
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource( 3 )
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = false
+shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
