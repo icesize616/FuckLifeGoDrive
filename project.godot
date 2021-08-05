@@ -27,7 +27,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Flgd"
+run/main_scene="res://scenes/world.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Singlton="*res://singlton.gd"
 
 [editor_plugins]
 
