@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://map/dirtt/Ground030_2K_Normal.jpg" type="Texture" id=7]
 [ext_resource path="res://map/road/Asphalt019_2K_Color.jpg" type="Texture" id=8]
 [ext_resource path="res://map/data.hterrain" type="Resource" id=9]
+[ext_resource path="res://Car.gd" type="Script" id=10]
+[ext_resource path="res://Camera.gd" type="Script" id=11]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -21,6 +23,8 @@ auto_exposure_enabled = true
 script = ExtResource( 2 )
 mode = 0
 textures = [ [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ) ], [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ) ] ]
+
+[sub_resource type="CubeMesh" id=4]
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 9.52713, 0, 0, 0, 11.3781, 0, 0, 0, 36.4962, 0, 0, 0 )
@@ -48,6 +52,7 @@ shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
+<<<<<<< HEAD
 transform = Transform( 0.104963, 0, 0, 0, 0.0878881, 0, 0, 0, 0.0274001, 9.91454, 4.86083, 7.92706 )
 
 [node name="Player1" type="Position3D" parent="."]
@@ -57,3 +62,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Player3" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+=======
+transform = Transform( -0.00360092, 0, -0.104902, 0, 0.0878881, 0, 0.027384, 0, -0.000939999, 2.49255, 2.88913, 6.62955 )
+script = ExtResource( 11 )
+
+[node name="Car" type="MeshInstance" parent="."]
+transform = Transform( 0.42839, 0, 0, 0, -0.0540725, 0, 0, 0, -0.0270233, 2.79927, 2.71114, 6.42305 )
+mesh = SubResource( 4 )
+material/0 = null
+script = ExtResource( 10 )
+>>>>>>> c52f734936945be408083270ecd02eb13ad399e5
