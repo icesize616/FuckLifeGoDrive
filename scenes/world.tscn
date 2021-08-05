@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://map/dirtt/Ground030_2K_Normal.jpg" type="Texture" id=7]
 [ext_resource path="res://map/road/Asphalt019_2K_Color.jpg" type="Texture" id=8]
 [ext_resource path="res://map/data.hterrain" type="Resource" id=9]
+[ext_resource path="res://scenes/Camera.gd" type="Script" id=10]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -48,4 +49,5 @@ shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.104963, 0, 0, 0, 0.0878881, 0, 0, 0, 0.0274001, 9.91454, 4.86083, 7.92706 )
+transform = Transform( -0.035674, 0, -0.0987152, 0, 0.0878881, 0, 0.025769, 0, -0.0093125, 9.91454, 4.86083, 7.92706 )
+script = ExtResource( 10 )
