@@ -49,3 +49,5 @@ shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.0196016, 0, -0.103117, 0, 0.0878881, 0, 0.0269181, 0, -0.00511689, 0, 3.12012, 6.2151 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Camera"]
