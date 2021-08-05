@@ -1,4 +1,5 @@
-extends MeshInstance
+extends Camera
+
 const speed = 10
 func _process(delta):
 	var dir = Vector3()
