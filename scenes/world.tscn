@@ -51,3 +51,15 @@ shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.035674, 0, -0.0987152, 0, 0.0878881, 0, 0.025769, 0, -0.0093125, 9.91454, 4.86083, 7.92706 )
 script = ExtResource( 10 )
+
+[node name="Player" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2658, 0.993026, 5.98413 )
+
+[node name="Player2" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.54286, 3.60195, 5.58174 )
+
+[node name="Player3" type="Position3D" parent="."]
+transform = Transform( 0.999719, 0, -0.0908535, 0, 1, 0, 0.00619114, 0, 0.999719, 0, 1.76433, 5.57688 )
+
+[node name="Player4" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.78878, 4.19835, 5.40467 )
