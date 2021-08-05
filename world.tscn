@@ -46,3 +46,6 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.104963, 0, 0, 0, 0.0878881, 0, 0, 0, 0.0274001, 9.91454, 4.86083, 7.92706 )
