@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/DidactGothic-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/mainmenu.gd" type="Script" id=2]
 [ext_resource path="res://mainmenu.mp3" type="AudioStream" id=3]
+[ext_resource path="res://scenes/AudioStreamPlayer.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -54,11 +55,16 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 3 )
 volume_db = 1.0
 autoplay = true
+script = ExtResource( 4 )
 
+[connection signal="pressed" from="Play" to="AudioStreamPlayer" method="_on_Play_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Create Host" to="AudioStreamPlayer" method="_on_Create_Host_pressed"]
 [connection signal="pressed" from="Create Host" to="." method="_on_Create_Host_pressed"]
+[connection signal="pressed" from="Connect to server" to="AudioStreamPlayer" method="_on_Connect_to_server_pressed"]
 [connection signal="pressed" from="Connect to server" to="." method="_on_Connect_to_server_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

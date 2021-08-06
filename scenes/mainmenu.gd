@@ -29,9 +29,11 @@ func _on_Play_pressed():
 	var game = preload("res://scenes/world.tscn").instance()
 	get_tree().get_root().add_child(game)
 	hide()
+	
 
 
 func _on_Button_pressed():
+	
 	var game = preload("res://scenes/Enter_IP.tscn").instance()
 	get_tree().get_root().add_child(game)
 	hide()
