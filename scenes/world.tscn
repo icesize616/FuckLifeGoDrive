@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://map/data.hterrain" type="Resource" id=9]
 [ext_resource path="res://scenes/Camera.gd" type="Script" id=10]
 [ext_resource path="res://scenes/3dPlayer.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://models/21099/Vaz-21099.dae" type="PackedScene" id=12]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -50,7 +51,8 @@ shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.035674, 0, -0.0987151, 0, 0.0878881, 0, 0.025769, 0, -0.00931251, 13.9785, 4.56684, 8.50986 )
+transform = Transform( 0.00521433, -0.041764, 0.0961556, 0.00266638, 0.0806283, 0.0348753, -0.0273537, 0.000221387, 0.00157949, 5.05181, 3.25196, 6.63597 )
+fov = 112.578
 script = ExtResource( 10 )
 
 [node name="Player" type="Position3D" parent="."]
@@ -66,11 +68,14 @@ transform = Transform( 0.999719, 0, -0.0908535, 0, 1, 0, 0.00619114, 0, 0.999719
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.78878, 4.19835, 5.40467 )
 
 [node name="3dPlayer2" type="MeshInstance" parent="."]
-transform = Transform( 0.037599, 2.55043e-09, 0, -7.66469e-09, 0.0232261, 0, 0, 0, 0.00826217, 15.4925, 4.29213, 8.49324 )
+transform = Transform( 0.037599, 2.55043e-09, 0, -7.66469e-09, 0.0232261, 0, 0, 0, 0.00826217, 4.45768, 2.58499, 6.60549 )
 mesh = ExtResource( 11 )
 material/0 = null
 
 [node name="3dPlayer" type="MeshInstance" parent="."]
-transform = Transform( -0.0365138, 0, -0.0084868, 0, 0.023, 0, 0.00274705, 0, -0.00768712, 15.4821, 4.24292, 8.80178 )
+transform = Transform( -0.0365138, 0, -0.0084868, 0, 0.023, 0, 0.00274705, 0, -0.00768712, 4.49705, 2.57854, 6.71814 )
 mesh = ExtResource( 11 )
 material/0 = null
+
+[node name="Vaz-21099" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.352346, 0, 0, 0, 0.300991, 0, 0, 0, 0.0882866, 3.91498, 2.57088, 6.56939 )

@@ -10,10 +10,10 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Play" type="Button" parent="."]
-margin_left = 117.0
-margin_top = 57.0
-margin_right = 358.0
-margin_bottom = 112.0
+margin_left = 341.717
+margin_top = 74.6332
+margin_right = 582.717
+margin_bottom = 129.633
 custom_fonts/font = SubResource( 1 )
 text = "Играть"
 __meta__ = {
@@ -21,10 +21,10 @@ __meta__ = {
 }
 
 [node name="Create Host" type="Button" parent="."]
-margin_left = 117.488
-margin_top = 151.092
-margin_right = 358.488
-margin_bottom = 206.092
+margin_left = 342.205
+margin_top = 168.725
+margin_right = 583.205
+margin_bottom = 223.725
 custom_fonts/font = SubResource( 1 )
 text = "Создать сервер"
 __meta__ = {
@@ -32,12 +32,22 @@ __meta__ = {
 }
 
 [node name="Connect to server" type="Button" parent="."]
-margin_left = 116.919
-margin_top = 248.985
-margin_right = 357.919
-margin_bottom = 303.985
+margin_left = 341.636
+margin_top = 266.618
+margin_right = 582.636
+margin_bottom = 321.618
 custom_fonts/font = SubResource( 1 )
 text = "Подключиться к серверу"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 621.758
+margin_top = 156.48
+margin_right = 825.758
+margin_bottom = 232.48
+text = "test"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,3 +55,4 @@ __meta__ = {
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Create Host" to="." method="_on_Create_Host_pressed"]
 [connection signal="pressed" from="Connect to server" to="." method="_on_Connect_to_server_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
