@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+# warning-ignore:return_value_discarded
 	get_tree().connect("network_peer_connected",self,"_connected")
 
 
@@ -18,6 +19,12 @@ func _on_Connect_to_server_pressed():
 
 func _connected(client_id):
 	Singlton.user_id = client_id
+	var game = preload("res://scenes/world.tscn").instance()
+	get_tree().get_root().add_child(game)
+	hide()
+
+
+func _on_Play_pressed():
 	var game = preload("res://scenes/world.tscn").instance()
 	get_tree().get_root().add_child(game)
 	hide()
